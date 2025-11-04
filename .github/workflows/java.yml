@@ -31,6 +31,7 @@ jobs:
           - 24
           - 25
           - gvm-24
+          - gvm-25
     steps:
       - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2
