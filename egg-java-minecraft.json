@@ -14,7 +14,8 @@
         "pid_limit"
     ],
     "docker_images": {
-        "Java 25": "ghcr.io\/bisquit-host\/pterodactyl-yolks:java_24",
+        "Java 25": "ghcr.io\/bisquit-host\/pterodactyl-yolks:java_25",
+        "GraalVM 25": "ghcr.io/bisquit-host/pterodactyl-yolks:java_gvm-25",
         "Java 21": "ghcr.io\/bisquit-host\/pterodactyl-yolks:java_21",
         "Java 17": "ghcr.io\/bisquit-host\/pterodactyl-yolks:java_17",
         "Java 16": "ghcr.io\/bisquit-host\/pterodactyl-yolks:java_16",
