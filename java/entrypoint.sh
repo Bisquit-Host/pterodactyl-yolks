@@ -245,6 +245,11 @@ if [[ "$OVERRIDE_STARTUP" == "1" ]]; then
 		FLAGS+=("-XX:+ParallelRefProcEnabled -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:MaxInlineLevel=15")
 	elif [[ "$ADDITIONAL_FLAGS" == "Basic ZGC Flags" ]]; then
 		FLAGS+=("-XX:+UseZGC -XX:+ZGenerational -XX:+DisableExplicitGC -XX:+PerfDisableSharedMem -XX:+UseCompressedOops -XX:+UseNUMA -XX:ZCollectionInterval=30 -XX:ZAllocationSpikeTolerance=5")
+	elif [[ "$ADDITIONAL_FLAGS" == "GTNH Flags" ]]; then
+		FLAGS+=("-Dfml.readTimeout=180")
+		if [[ -f "java9args.txt" ]]; then
+			FLAGS+=("@java9args.txt")
+		fi
 	fi
 
 	if [[ "$COMPACT_OBJECT_HEADERS" == "1" ]]; then
